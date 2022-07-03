@@ -9,7 +9,7 @@
 **RUNNING THE WEB APP**
 1. Open terminal & navigate to project directory (`361-admin`)
 2. run `export FLASK_APP=app`
-3. run `export FLASK_ENV=development
+3. run `export FLASK_ENV=development`
 4. run `flask run`
 (It should now list the IP address to access the web app; something like 127.0.0.1:#PORT NUMBER)
 
