@@ -1,0 +1,11 @@
+Location,value,type
+E5-6008,5,>25
+E5-6008,15,23-25
+E5-6008, 25, 20-22 (ideal)
+E5-6008, 17, 17-19
+E5-6008, 12, <17
+SYDE Lounge, 10, >25
+SYDE Lounge, 11, 23-25
+SYDE Lounge, 15, 20-22(ideal)
+SYDE Lounge, 7, 17-19
+SYDE Lounge, 2, <17

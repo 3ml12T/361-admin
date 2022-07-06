@@ -1,83 +1,76 @@
-from dash import Dash, dcc, html, Input, Output
+import plotly.graph_objects as go
 import plotly.express as px
-
-import pandas as pd
+from dash import Dash, dcc, Output, Input, html  
 
 app = Dash(__name__)
+#fig = go.Figure()
+#fig.add_trace(go.Bar(
+#    y=['>25', '23-25', '20-22 (ideal)', "17-19", "<17"],
+#    x=[5, 15, 25, 17, 12],
+#    name='E5-6008',
+#    orientation='h',
+#    marker=dict(
+#        color='rgba(246, 78, 139, 0.6)',
+#        line=dict(color='rgba(246, 78, 139, 1.0)', width=2)
+#    )
+#))
+#fig.add_trace(go.Bar(
+#    y=['>25', '23-25', '20-22 (ideal)', "17-19", "<17"],
+#    x=[10, 11, 15, 7, 2],
+#    name='SYDE Lounge',
+#    orientation='h',
+#    marker=dict(
+#        color='rgba(58, 71, 80, 0.6)',
+#        line=dict(color='rgba(58, 71, 80, 1.0)', width=3)
+#    )
+#))
+#
+#fig.update_layout(barmode='stack')
+#fig.show()
 
-df = pd.read_csv('../data/11_37_53_30_6_2022.csv')
+csvFile = 'cum_data.csv'
+df = px.pd.read_csv(csvFile)
+
+#radioButtons = dcc.RadioItems(['All', 'E5-6008', 'SYDE Lounge'], 'All',inline=True)
+#graph = dcc.Graph(figure={})
+#fig = px.bar(df, 
+#            x='value', 
+#            y='type', 
+#            color='Location', 
+#            orientation='h',
+#                height=400,
+#                title="Cumulative Data",
+#            )
+#fig.show()
 
 app.layout = html.Div([
-    html.Div([
-
-        html.Div([
-            dcc.Dropdown(
-                df['Time'].unique(),
-                'Fertility rate, total (births per woman)',
-                id='xaxis-column'
-            ),
-            dcc.RadioItems(
-                ['Linear', 'Log'],
-                'Linear',
-                id='xaxis-type',
-                inline=True
-            )
-        ], style={'width': '48%', 'display': 'inline-block'}),
-
-        html.Div([
-            dcc.Dropdown(
-                df['Indicator Name'].unique(),
-                'Life expectancy at birth, total (years)',
-                id='yaxis-column'
-            ),
-            dcc.RadioItems(
-                ['Linear', 'Log'],
-                'Linear',
-                id='yaxis-type',
-                inline=True
-            )
-        ], style={'width': '48%', 'float': 'right', 'display': 'inline-block'})
-    ]),
-
-    dcc.Graph(id='indicator-graphic'),
-
-    dcc.Slider(
-        df['Year'].min(),
-        df['Year'].max(),
-        step=None,
-        id='year--slider',
-        value=df['Year'].max(),
-        marks={str(year): str(year) for year in df['Year'].unique()},
-
-    )
+    dcc.RadioItems(
+        ['All', 'E5-6008', 'SYDE Lounge'], 
+        'E5-6008',
+        inline=True,
+        id='location-radioButton'),
+    dcc.Graph(
+        id='horizontal-bar-chart',)    
 ])
 
-
 @app.callback(
-    Output('indicator-graphic', 'figure'),
-    Input('xaxis-column', 'value'),
-    Input('yaxis-column', 'value'),
-    Input('xaxis-type', 'value'),
-    Input('yaxis-type', 'value'),
-    Input('year--slider', 'value'))
-def update_graph(xaxis_column_name, yaxis_column_name,
-                 xaxis_type, yaxis_type,
-                 year_value):
-    dff = df[df['Year'] == year_value]
+    Output('horizontal-bar-chart', 'figure'),
+    Input('location-radioButton', 'location'))
+def update_figure(selected_location):
+    filtered_df = df[df.Location == selected_location]
+    print (filtered_df)
+    #Returns an empty data frame no matter location choice 
+    fig = px.bar(filtered_df,
+                x='value',
+                y='type',
+                color='Location',
+                orientation='h',
+                height=400,
+                title='Cumulative Data')
+    fig.update_layout(transition_duration=500)
+    #config = {'staticPlot': True}
 
-    fig = px.scatter(x=dff[dff['Indicator Name'] == xaxis_column_name]['Value'],
-                     y=dff[dff['Indicator Name'] == yaxis_column_name]['Value'],
-                     hover_name=dff[dff['Indicator Name'] == yaxis_column_name]['Country Name'])
-
-    fig.update_layout(margin={'l': 40, 'b': 40, 't': 10, 'r': 0}, hovermode='closest')
-
-    fig.update_xaxes(title=xaxis_column_name,
-                     type='linear' if xaxis_type == 'Linear' else 'log')
-
-    fig.update_yaxes(title=yaxis_column_name,
-                     type='linear' if yaxis_type == 'Linear' else 'log')
-
-    return fig
+    return fig, config
 
 
 if __name__ == '__main__':

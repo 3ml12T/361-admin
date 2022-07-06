@@ -1,7 +1,7 @@
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
-import datetime as dt
+from dash_core_components import dcc
+from dash_html_components import html
+from datetime import dt
 from dash.dependencies import Input, Output
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
