@@ -32,16 +32,17 @@ csvFile = 'cum_data.csv'
 df = px.pd.read_csv(csvFile)
 
 #radioButtons = dcc.RadioItems(['All', 'E5-6008', 'SYDE Lounge'], 'All',inline=True)
-#graph = dcc.Graph(figure={})
-#fig = px.bar(df, 
-#            x='value', 
-#            y='type', 
-#            color='Location', 
-#            orientation='h',
-#                height=400,
-#                title="Cumulative Data",
-#            )
-#fig.show()
+# graph = dcc.Graph(figure={})
+# filtered_df=df[df["Location"] == "E5-6008"]
+# fig = px.bar(filtered_df, 
+            # x='value', 
+            # y='type', 
+            # color='Location', 
+            # orientation='h',
+                # height=400,
+                # title="Cumulative Data",
+            # )
+# fig.show()
 
 app.layout = html.Div([
     dcc.RadioItems(
@@ -57,8 +58,9 @@ app.layout = html.Div([
     Output('horizontal-bar-chart', 'figure'),
     Input('location-radioButton', 'location'))
 def update_figure(selected_location):
-    filtered_df = df[df.Location == selected_location]
-    print (filtered_df)
+    #filtered_df = df[df['Location'] == selected_location]
+    print (selected_location)
+    print (df)
     #Returns an empty data frame no matter location choice 
     fig = px.bar(filtered_df,
                 x='value',
@@ -70,7 +72,7 @@ def update_figure(selected_location):
     fig.update_layout(transition_duration=500)
     #config = {'staticPlot': True}
 
-    return fig, config
+    return fig#, config
 
 
 if __name__ == '__main__':
