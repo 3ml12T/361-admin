@@ -1,13 +1,17 @@
-// document.getElementById("e5").addEventListener("onclick", changeGraph;
-// document.getElementById("syde-lounge").addEventListener("click", changeGraph);
-// document.getElementById("dc-library").addEventListener("click", changeGraph);
-// document.getElementById("all-locations").addEventListener("click", changeGraph);
+// check the all locations radio button by default
 
 document.getElementById('temp-all-locations').checked="true";
 document.getElementById('hum-all-locations').checked="true";
 document.getElementById('light-all-locations').checked="true";
 
+// function to change the temperature graph based on radio button checked
+// this function is called any time a radio button is clicked
+
 function changeTempGraph() {
+
+// check which radio button is currently checked
+// once the correct radio button is identified the img is updated accordingly
+// the source path on the image is changed to match the corresponding radio button
 
   if(document.getElementById('temp-e5').checked) {
   document.getElementById("temp-graph-img").src = "images/e5-classroom.jpg";
@@ -26,6 +30,9 @@ function changeTempGraph() {
     }
 
 };
+
+// function to change the humidity graph based on radio button checked
+// function structure is identical to changeTempGraph, but with the humidity-specific radio buttons & graphs
 
 function changeHumGraph() {
 
@@ -46,6 +53,9 @@ function changeHumGraph() {
     }
 
 };
+
+// function to change the light graph based on radio button checked
+// function structure is identical to changeTempGraph, but with the light-specific radio buttons & graphs
 
 function changeLightGraph() {
 
