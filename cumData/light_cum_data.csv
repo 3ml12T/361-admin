@@ -1,0 +1,7 @@
+Location,value,type
+E5-6008,3,Over 500 lux (Acceptable)
+E5-6008,7,Under 500 lux (Unacceptable)
+SYDE Lounge,4,Over 500 lux (Acceptable)
+SYDE Lounge,6,Under 500 lux (Unacceptable)
+DC Library,2,Over 500 lux (Acceptable)
+DC Library,8,Under 500 lux (Unacceptable)

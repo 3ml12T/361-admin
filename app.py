@@ -28,7 +28,7 @@ app = Dash(__name__)
 #fig.update_layout(barmode='stack')
 #fig.show()
 
-csvFile = 'cum_data.csv'
+csvFile = 'cumData/humidity_cum_data.csv'
 df = px.pd.read_csv(csvFile)
 
 #radioButtons = dcc.RadioItems(['All', 'E5-6008', 'SYDE Lounge'], 'All',inline=True)
@@ -46,7 +46,7 @@ df = px.pd.read_csv(csvFile)
 
 app.layout = html.Div([
     dcc.RadioItems(
-        ['All', 'E5-6008', 'SYDE Lounge'], 
+        ['All', 'E5-6008', 'SYDE Lounge', 'DC Library'], 
         'All',
         inline=True,
         id='location'),
@@ -70,10 +70,11 @@ def update_figure(location_value):
                 color='Location',
                 orientation='h',
                 height=400,
-                title='Cumulative Data')
+                title='Cumulative Humidity Data')
     fig.update_layout(transition_duration=500)
     #config = {'staticPlot': True}
 
+    fig.write_image("humidity_all.jpeg")
     return fig#, config
 
 
