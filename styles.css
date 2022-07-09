@@ -1,0 +1,60 @@
+h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+body {
+  font-family: 'Helvetica';
+  text-align: center;
+}
+
+.graph-heading {
+  text-align: center;
+}
+
+.data-summary {
+  text-align: left;
+}
+
+.data-subheading {
+  text-align: left;
+}
+
+.intro-text {
+  text-align: center;
+  width: 80%;
+  /* margin: auto; */
+  margin: 16px auto 16px auto;
+}
+
+.summary-descr {
+  text-align: left;
+}
+
+.graph-row {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.left-column {
+  float: left;
+  width: 45%;
+  border-style: solid;
+  margin-right: 10px;
+}
+
+
+.right-column {
+  width: 50%;
+  float: left;
+  margin-right: 10px;
+}

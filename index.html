@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title></title>
+  </head>
+  <body>
+    <h1>Catchy Title</h1>
+    <p class="intro-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+    <div class="graph-row">
+      <div class="left-column">
+        <h3 class="graph-heading">% of time spent in temperature ranges</h3>
+        <input type="radio" id="temp-e5" name="temp-location-choice" value="E5" onclick="changeTempGraph()">
+        <label for="e5">E5</label>
+        <input type="radio" id="temp-syde-lounge" name="temp-location-choice" value="SYDELounge" onclick="changeTempGraph()">
+        <label for="syde-lounge">SYDE Lounge</label>
+        <input type="radio" id="temp-dc-library" name="temp-location-choice" value="DCLibrary" onclick="changeTempGraph()">
+        <label for="dc-library">DC Library</label>
+        <input type="radio" id="temp-all-locations" name="temp-location-choice" value="AllLocations" onclick="changeTempGraph()">
+        <label for="all-locations">All Locations</label><br>
+        <img src="images/all-locations.jpg" alt="image of e5 exterior" id="temp-graph-img" height="250px">
+      </div>
+
+      <div class="right-column">
+        <h3 class="data-summary">Temperature Summary:</h3>
+        <h3 class="data-subheading">E5-6008:</h3>
+        <p class="summary-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h3 class="data-subheading">SYDE Lounge:</h3>
+        <p class="summary-descr">Vulputate eu scelerisque felis imperdiet proin fermentum. Et egestas quis ipsum suspendisse ultrices gravida dictum.</p>
+        <h3 class="data-subheading">DC Library:</h3>
+        <p class="summary-descr">Elementum curabitur vitae nunc sed velit dignissim sodales ut eu. Vitae et leo duis ut.</p>
+      </div>
+
+    </div>
+
+
+    <div class="graph-row">
+      <div class="left-column">
+        <h3 class="graph-heading">% of time spent in humidity ranges</h3>
+        <input type="radio" id="hum-e5" name="hum-location-choice" value="E5" onclick="changeHumGraph()">
+        <label for="e5">E5</label>
+        <input type="radio" id="hum-syde-lounge" name="hum-location-choice" value="SYDELounge" onclick="changeHumGraph()">
+        <label for="syde-lounge">SYDE Lounge</label>
+        <input type="radio" id="hum-dc-library" name="hum-location-choice" value="DCLibrary" onclick="changeHumGraph()">
+        <label for="dc-library">DC Library</label>
+        <input type="radio" id="hum-all-locations" name="hum-location-choice" value="AllLocations" onclick="changeHumGraph()">
+        <label for="all-locations">All Locations</label><br>
+        <img src="images/all-locations.jpg" alt="image of e5 exterior" id="hum-graph-img" height="250px">
+      </div>
+
+      <div class="right-column">
+        <h3 class="data-summary">Humidity Summary:</h3>
+        <h3 class="data-subheading">E5-6008:</h3>
+        <p class="summary-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h3 class="data-subheading">SYDE Lounge:</h3>
+        <p class="summary-descr">Vulputate eu scelerisque felis imperdiet proin fermentum. Et egestas quis ipsum suspendisse ultrices gravida dictum.</p>
+        <h3 class="data-subheading">DC Library:</h3>
+        <p class="summary-descr">Elementum curabitur vitae nunc sed velit dignissim sodales ut eu. Vitae et leo duis ut.</p>
+      </div>
+
+    </div>
+
+    <div class="graph-row">
+      <div class="left-column">
+        <h3 class="graph-heading">% of time spent in light ranges</h3>
+        <input type="radio" id="light-e5" name="light-location-choice" value="E5" onclick="changeLightGraph()">
+        <label for="e5">E5</label>
+        <input type="radio" id="light-syde-lounge" name="light-location-choice" value="SYDELounge" onclick="changeLightGraph()">
+        <label for="syde-lounge">SYDE Lounge</label>
+        <input type="radio" id="light-dc-library" name="light-location-choice" value="DCLibrary" onclick="changeLightGraph()">
+        <label for="dc-library">DC Library</label>
+        <input type="radio" id="light-all-locations" name="light-location-choice" value="AllLocations" onclick="changeLightGraph()">
+        <label for="all-locations">All Locations</label><br>
+        <img src="images/all-locations.jpg" alt="image of e5 exterior" id="light-graph-img" height="250px">
+      </div>
+
+      <div class="right-column">
+        <h3 class="data-summary">Light Summary:</h3>
+        <h3 class="data-subheading">E5-6008:</h3>
+        <p class="summary-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h3 class="data-subheading">SYDE Lounge:</h3>
+        <p class="summary-descr">Vulputate eu scelerisque felis imperdiet proin fermentum. Et egestas quis ipsum suspendisse ultrices gravida dictum.</p>
+        <h3 class="data-subheading">DC Library:</h3>
+        <p class="summary-descr">Elementum curabitur vitae nunc sed velit dignissim sodales ut eu. Vitae et leo duis ut.</p>
+      </div>
+
+    </div>
+
+
+  </body>
+
+  <!-- pretty sure this should be in the header -->
+
+  <footer>
+    <script src="index.js" charset="utf-8"></script>
+  </footer>
+
+</html>
