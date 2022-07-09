@@ -47,21 +47,23 @@ df = px.pd.read_csv(csvFile)
 app.layout = html.Div([
     dcc.RadioItems(
         ['All', 'E5-6008', 'SYDE Lounge'], 
-        'E5-6008',
+        'All',
         inline=True,
-        id='location-radioButton'),
+        id='location'),
     dcc.Graph(
         id='horizontal-bar-chart',)    
 ])
 
 @app.callback(
     Output('horizontal-bar-chart', 'figure'),
-    Input('location-radioButton', 'location'))
-def update_figure(selected_location):
-    #filtered_df = df[df['Location'] == selected_location]
-    print (selected_location)
-    print (df)
-    #Returns an empty data frame no matter location choice 
+    Input('location', 'value'))
+def update_figure(location_value):
+
+    if location_value != 'All':
+        filtered_df = df[df["Location"]==location_value]
+    else:
+        filtered_df = df
+
     fig = px.bar(filtered_df,
                 x='value',
                 y='type',
