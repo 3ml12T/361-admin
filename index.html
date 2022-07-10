@@ -20,17 +20,18 @@
         <label for="dc-library">DC Library</label>
         <input type="radio" id="temp-all-locations" name="temp-location-choice" value="AllLocations" onclick="changeTempGraph()">
         <label for="all-locations">All Locations</label><br>
-        <img src="images/temperature-all-locations.png" alt="image of e5 exterior" id="temp-graph-img" width="90%">
+        <img src="images/temperature-all-locations.png" alt="bar graph displaying percentage of time spent in, above, and below the acceptable range for temperature in lux" id="temp-graph-img" width="90%">
+        <p class="asterisk-note">* AR stands for acceptable range. For temperature the acceptable range is based on the ASHRAE standards for building comfort.</p>
       </div>
 
       <div class="right-column">
         <h3 class="data-summary">Temperature Summary:</h3>
         <h3 class="data-subheading">E5-6008:</h3>
-        <p class="summary-descr">Students spent <b>X% of their total recorded time</b> in this classroom. <b>Y% of that time</b> was spent in temperature ranges outside of the commonly accepted range for a comfortable building temperature.</p>
+        <p class="summary-descr">Students spent <b>85% of their total recorded time</b> in this classroom. <b>4.25% of their total recorded time</b> was spent in this classroom and outside of the commonly accepted range for a comfortable building temperature.</p>
         <h3 class="data-subheading">SYDE Lounge:</h3>
-        <p class="summary-descr">Students spent <b>X% of their total recorded time</b> in the SYDE Lounge, primarily to eat lunch between classes. <b>Y% of that time</b> was spent in temperature ranges outside of the commonly accepted range for a comfortable building temperature.</p>
+        <p class="summary-descr">Students spent <b>10% of their total recorded time</b> in the SYDE Lounge, primarily to eat lunch between classes. They spent <b>0.5% of their total recorded time</b> in this location and outside of the commonly accepted range for a comfortable building temperature.</p>
         <h3 class="data-subheading">DC Library:</h3>
-        <p class="summary-descr">The DC Library is a popular space for students to study outside of class, with approximately <b>X% of their recorded time</b> spent there. Of that time, <b>Y%</b> was spent in temperature ranges outside of the commonly accepted range for a comfortable building temperature.</p>
+        <p class="summary-descr">The DC Library is a popular space for students to study outside of class, with <b>5% of their recorded time</b> spent there. <b>0.25% of their total recorded time</b> was spent in this location and outside of the commonly accepted range for a comfortable building temperature.</p>
       </div>
 
     </div>
@@ -47,17 +48,18 @@
         <label for="dc-library">DC Library</label>
         <input type="radio" id="hum-all-locations" name="hum-location-choice" value="AllLocations" onclick="changeHumGraph()">
         <label for="all-locations">All Locations</label><br>
-        <img src="images/humidity-all-locations.png" alt="image of e5 exterior" id="hum-graph-img" width="90%">
+        <img src="images/humidity-all-locations.png" alt="bar graph displaying percentage of time spent in and above the acceptable range for humidity in RH%" id="hum-graph-img" width="90%">
+        <p class="asterisk-note">* AR stands for acceptable range. For humidity the acceptable range is based on the ASHRAE standards for building comfort.</p>
       </div>
 
       <div class="right-column">
         <h3 class="data-summary">Humidity Summary:</h3>
         <h3 class="data-subheading">E5-6008:</h3>
-        <p class="summary-descr">Students spent <b>X% of their total recorded time</b> in this classroom. <b>Y% of that time</b> was spent in humidity ranges outside of the commonly accepted range for a comfortable building.</p>
+        <p class="summary-descr">Students spent <b>85% of their total recorded time</b> in this classroom. <b>21.25% of their total recorded time</b> was spent in humidity ranges outside of the commonly accepted range for a comfortable building.</p>
         <h3 class="data-subheading">SYDE Lounge:</h3>
-        <p class="summary-descr">Students spent <b>X% of their total recorded time</b> in the SYDE Lounge. <b>Y% of that time</b> was spent in humidity ranges outside of the commonly accepted range for a comfortable building.</p>
+        <p class="summary-descr">Students spent <b>10% of their total recorded time</b> in the SYDE Lounge. <b>2.5% of their total recorded time</b> was spent in humidity ranges outside of the commonly accepted range for a comfortable building.</p>
         <h3 class="data-subheading">DC Library:</h3>
-        <p class="summary-descr">Approximately <b>X% of students' recorded time</b> was spent in the DC Library. Of that time, <b>Y%</b> was spent in humidity ranges outside of the commonly accepted range for a comfortable building.</p>
+        <p class="summary-descr">Approximately <b>5% of students' recorded time</b> was spent in the DC Library. <b>1.25% of their total recorded time</b> was spent in humidity ranges outside of the commonly accepted range for a comfortable building.</p>
       </div>
 
     </div>
@@ -73,17 +75,18 @@
         <label for="dc-library">DC Library</label>
         <input type="radio" id="light-all-locations" name="light-location-choice" value="AllLocations" onclick="changeLightGraph()">
         <label for="all-locations">All Locations</label><br>
-        <img src="images/light-all-locations.png" alt="image of e5 exterior" id="light-graph-img" width="90%">
+        <img src="images/light-all-locations.png" alt="bar graph displaying percentage of time spent in and below the acceptable range for light in lux" id="light-graph-img" width="90%">
+        <p class="asterisk-note">* AR stands for acceptable range. For light the acceptable range is based on the CEN standards for visibility.</p>
       </div>
 
       <div class="right-column">
         <h3 class="data-summary">Light Summary:</h3>
         <h3 class="data-subheading">E5-6008:</h3>
-        <p class="summary-descr">Students spent <b>X% of their total recorded time</b> in this classroom. <b>Y% of that time</b> was spent in light ranges outside of the commonly accepted range for comfortable visibility.</p>
+        <p class="summary-descr">Students spent <b>85% of their total recorded time</b> in this classroom. <b>76.5% of their total recorded time</b> was spent in light ranges outside of the commonly accepted range for comfortable visibility.</p>
         <h3 class="data-subheading">SYDE Lounge:</h3>
-        <p class="summary-descr">Students spent <b>X% of their total recorded time</b> in the SYDE Lounge. <b>Y% of that time</b> was spent in light ranges outside of the commonly accepted range for comfortable visibility.</p>
+        <p class="summary-descr">Students spent <b>10% of their total recorded time</b> in the SYDE Lounge. <b>9% of their total recorded time</b> was spent in light ranges outside of the commonly accepted range for comfortable visibility.</p>
         <h3 class="data-subheading">DC Library:</h3>
-        <p class="summary-descr">Approximately <b>X% of students' recorded time</b> was spent in the DC Library. Of that time, <b>Y%</b> was spent in humidity ranges outside of the commonly accepted range for comfortable visibility.</p>
+        <p class="summary-descr">Approximately <b>5% of students' recorded time</b> was spent in the DC Library. <b>4.5% of their total recorded time</b> was spent in humidity ranges outside of the commonly accepted range for comfortable visibility.</p>
       </div>
 
     </div>

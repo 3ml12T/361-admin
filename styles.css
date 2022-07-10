@@ -60,3 +60,11 @@ body {
   float: left;
   margin-right: 10px;
 }
+
+.asterisk-note {
+  width: 80%;
+  text-align: left;
+  margin: auto;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
