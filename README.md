@@ -1,4 +1,8 @@
 # 361-admin
+
+## Accessing the deployed project ##
+The finished prototype can be accessed here: https://marthamatsui.github.io/361-admin/
+
 ## How to run ##
 **SETTING UP A VIRTUAL ENVIRONMENT**
 1. Open terminal & navigate to project directory (`361-admin`)
