@@ -1,0 +1,7 @@
+Location,value,type
+E5-6008,76.5,<500 
+E5-6008,25,>=500 (AR)
+SYDE Lounge,9,<500 
+SYDE Lounge,1,>=500 (AR)
+DC Library,4.5,<500 
+DC Library,0.5,>=500 (AR)

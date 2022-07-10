@@ -1,0 +1,10 @@
+Location,value,type
+E5-6008,2.55,<20.8
+E5-6008,80.75,20.8-27.2 (AR)
+E5-6008,1.7,>27.2
+SYDE Lounge,0.3,<20.8
+SYDE Lounge,9.5,20.8-27.2 (AR)
+SYDE Lounge,0.2,>27.2
+DC Library,0.15,<20.8
+DC Library,4.75,20.8-27.2 (AR)
+DC Library,0.1,>27.2
